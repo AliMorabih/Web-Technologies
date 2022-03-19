@@ -55,9 +55,9 @@
       if(userAnswer === currentQuestion.correctAnswer){
         // add to the number of correct answers
         numCorrect++;
-
+		
         // color the answers green
-        answerContainers[questionNumber].style.color = 'lightgreen';
+        answerContainers[questionNumber].style.color = 'green';
       }
       // if answer is wrong or blank
       else{
@@ -67,7 +67,17 @@
     });
 
     // show number of correct answers out of total
-    resultsContainer.innerHTML = `${numCorrect} out of ${myQuestions.length}`;
+        resultsContainer.innerHTML = `You score is ${numCorrect}  out ${myQuestions.length}`;
+		
+		numCo = numCorrect * 25
+		if (numCo < 50)
+		   console.log('failed the test, Your Total Score is '+numCo);
+		else
+		   console.log('Congratulation !!! , Your Total Score is '+numCo);
+	   
+			 
+			
+
   }
 
   const quizContainer = document.getElementById('quiz');
