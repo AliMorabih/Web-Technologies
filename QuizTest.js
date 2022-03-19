@@ -75,64 +75,43 @@
   const submitButton = document.getElementById('submit');
   const myQuestions = [
     {
-      question: "Who invented JavaScript?",
+      question: "What year were soccer rules codified ?",
       answers: {
-        a: "Douglas Crockford",
-		b: "Brendan Eich",
-        c: "Sheryl Sandberg"
+        a: " 1862 ",
+		b: " 1863 ",
+        c: " 1864 "
         },
-      correctAnswer: "c"
+      correctAnswer: "b"
     },
     {
-      question: "Which one of these is a JavaScript package manager?",
+      question: " How many panels are there on a traditional soccer ball ? ",
       answers: {
-        a: "Node.js",
-        b: "TypeScript",
-        c: "npm"
+        a: " 32 panels ",
+        b: " 33 panels",
+        c: " 34 panels"
       },
-      correctAnswer: "c"
+      correctAnswer: "a"
     },
     {
-      question: "Which tool can you use to ensure code quality?",
+      question: " Who was the first English player to win league titles in four countries ?",
       answers: {
-        a: "Angular",
-        b: "jQuery",
-        c: "RequireJS",
-        d: "ESLint"
+        a: " Frand Lampard",
+        b: " Steven Gerrard",
+        c: " Rahim sterling",
+        d: " David Beckham"
       },
       correctAnswer: "d"
     },
 	{
-      question: "Which tool can you use to ensure code quality?",
+      question: " What other team competes against Real Madrid in “The Classic” ?",
       answers: {
-        a: "Angular",
-        b: "jQuery",
-        c: "RequireJS",
-        d: "ESLint"
+        a: "Barcalona",
+        b: "Getafe",
+        c: "Atletico Madrid",
+        d: "VillaReal"
       },
-      correctAnswer: "d"
+      correctAnswer: "a"
     },
-	{
-      question: "Which tool can you use to ensure code quality?",
-      answers: {
-        a: "Angular",
-        b: "jQuery",
-        c: "RequireJS",
-        d: "ESLint"
-      },
-      correctAnswer: "d"
-    },
-	{
-      question: "Which tool can you use to ensure code quality?",
-      answers: {
-        a: "Angular",
-        b: "jQuery",
-        c: "RequireJS",
-        d: "ESLint"
-      },
-      correctAnswer: "d"
-    },
-	
 	
   ];
 
