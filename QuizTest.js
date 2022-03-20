@@ -76,7 +76,11 @@
 	    //console.log('failed the test, Your Total Score is '+numCo);
 		 window.alert("You failed the test yr score  " +numCo)
 	}else{
+<<<<<<< HEAD
 		 window.alert("Congratulation you succeed the test the test yr score  " +numCo)
+=======
+		 window.alert("Congratulation you have succeed the test the test yr score  " +numCo)
+>>>>>>> 9ad84419dea57be858c731221e9077d41b0162e6
 	    //console.log('Congratulation !!! , Your Total Score is '+numCo);
 		window.location = 'file:///C:QuizProject/CongratulationPage.html'; 
 	}
