@@ -7,13 +7,13 @@
     myQuestions.forEach(
       (currentQuestion, questionNumber) => {
 
-        // variable to store the list of possible answers
+        // Array that stores the list of possible answers
         const answers = [];
 
-        // and for each available answer...
+        // Loop for each  answer
         for(letter in currentQuestion.answers){
 
-          // ...add an HTML radio button
+          // Set up HTML radio button for the player selection
           answers.push(
             `<label>
               <input type="radio" name="question${questionNumber}" value="${letter}">
@@ -23,7 +23,7 @@
           );
         }
 
-        // add this question and its answers to the output
+        // Adding  question & its answers to the output
         output.push(
           `<div class="question"> ${currentQuestion.question} </div>
           <div class="answers"> ${answers.join('')} </div>`
@@ -83,7 +83,6 @@
 			
 
   }
-
   const quizContainer = document.getElementById('quiz');
   const resultsContainer = document.getElementById('results');
   const submitButton = document.getElementById('submit');
