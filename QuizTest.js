@@ -7,13 +7,13 @@
     myQuestions.forEach(
       (currentQuestion, questionNumber) => {
 
-        // Array that stores the list of possible answers
+        // variable to store the list of possible answers
         const answers = [];
 
-        // Loop for each  answer
+        // and for each available answer...
         for(letter in currentQuestion.answers){
 
-          // Set up HTML radio button for the player selection
+          // ...add an HTML radio button
           answers.push(
             `<label>
               <input type="radio" name="question${questionNumber}" value="${letter}">
@@ -23,7 +23,7 @@
           );
         }
 
-        // Adding  question & its answers to the output
+        // add this question and its answers to the output
         output.push(
           `<div class="question"> ${currentQuestion.question} </div>
           <div class="answers"> ${answers.join('')} </div>`
@@ -39,10 +39,7 @@
 
     // gather answer containers from our quiz
     const answerContainers = quizContainer.querySelectorAll('.answers');
-	
-	// Declaration of variable point by each question
-	let point = 25;
-	
+
     // keep track of user's answers
     let numCorrect = 0;
 
@@ -58,9 +55,9 @@
       if(userAnswer === currentQuestion.correctAnswer){
         // add to the number of correct answers
         numCorrect++;
-		
+
         // color the answers green
-        answerContainers[questionNumber].style.color = 'green';
+        answerContainers[questionNumber].style.color = 'lightgreen';
       }
       // if answer is wrong or blank
       else{
@@ -69,6 +66,7 @@
       }
     });
 
+<<<<<<< HEAD
 		numCo = numCorrect * point;
 		
 		
@@ -90,54 +88,81 @@
    		
 		
 	}
+=======
+    // show number of correct answers out of total
+    resultsContainer.innerHTML = `${numCorrect} out of ${myQuestions.length}`;
+  }
+
+>>>>>>> parent of c5d7671 ( Add)
   const quizContainer = document.getElementById('quiz');
   const resultsContainer = document.getElementById('results');
   const submitButton = document.getElementById('submit');
   const myQuestions = [
     {
-      question: "What year were soccer rules codified ?",
+      question: "Who invented JavaScript?",
       answers: {
-        a: " 1862 ",
-		b: " 1863 ",
-        c: " 1864 "
+        a: "Douglas Crockford",
+		b: "Brendan Eich",
+        c: "Sheryl Sandberg"
         },
-      correctAnswer: "b"
-    },
-    {	
-      question: " How many panels are there on a traditional soccer ball ? ",
-      answers: {
-        a: " 32 panels ",
-        b: " 33 panels",
-        c: " 34 panels"
-      },
-      correctAnswer: "a"
+      correctAnswer: "c"
     },
     {
-      question: " Who was the first English player to win league titles in four countries ?",
+      question: "Which one of these is a JavaScript package manager?",
       answers: {
-        a: " Frand Lampard",
-        b: " Steven Gerrard",
-        c: " Rahim sterling",
-        d: " David Beckham"
+        a: "Node.js",
+        b: "TypeScript",
+        c: "npm"
+      },
+      correctAnswer: "c"
+    },
+    {
+      question: "Which tool can you use to ensure code quality?",
+      answers: {
+        a: "Angular",
+        b: "jQuery",
+        c: "RequireJS",
+        d: "ESLint"
       },
       correctAnswer: "d"
     },
 	{
-      question: " What other team competes against Real Madrid in “The Classic” ?",
+      question: "Which tool can you use to ensure code quality?",
       answers: {
-        a: "Barcalona",
-        b: "Getafe",
-        c: "Atletico Madrid",
-        d: "VillaReal"
+        a: "Angular",
+        b: "jQuery",
+        c: "RequireJS",
+        d: "ESLint"
       },
-      correctAnswer: "a"
+      correctAnswer: "d"
     },
+	{
+      question: "Which tool can you use to ensure code quality?",
+      answers: {
+        a: "Angular",
+        b: "jQuery",
+        c: "RequireJS",
+        d: "ESLint"
+      },
+      correctAnswer: "d"
+    },
+	{
+      question: "Which tool can you use to ensure code quality?",
+      answers: {
+        a: "Angular",
+        b: "jQuery",
+        c: "RequireJS",
+        d: "ESLint"
+      },
+      correctAnswer: "d"
+    },
+	
 	
   ];
 
-  // Starting the Quiz
+  // Kick things off
   buildQuiz();
 
-  //  listeners Event
+  // Event listeners
   submitButton.addEventListener('click', showResults);
 })();
