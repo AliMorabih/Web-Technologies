@@ -223,13 +223,18 @@ input[type=button]:hover{
 }
 
 .question{
+    font-size: 25px;
 	font-weight: 1000;
 	text-align: left;
-		
+	font-style: normal;
+
 }
 .answers {
+    font-size: 25px;
 	margin-bottom: 20px;
 	text-align: left;
+	font-style: normal;
+
 }
 .answers label{
 	display: block;
@@ -248,3 +253,6 @@ input[type=button]:hover{
 #submit:hover{
 	background-color: #38a;
 }
+
+
+

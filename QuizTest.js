@@ -70,9 +70,7 @@
     });
 
 		numCo = numCorrect * point;
-    
-		// Display the number of the correct answers 
-        resultsContainer.innerHTML = `Your correct answers is  ${numCorrect}  out  of  ${myQuestions.length} wrong answers`;
+		
 		
 	if (numCo < 50)
 	    //console.log('failed the test, Your Total Score is '+numCo);
@@ -81,7 +79,9 @@
 		 window.alert("Congratulation you succeed the test the test yr score  " +numCo)
 	    //console.log('Congratulation !!! , Your Total Score is '+numCo);
 			
-
+		// Display the number of the correct answers 
+        resultsContainer.innerHTML = `Your correct answers is  ${numCorrect}  out  of  ${myQuestions.length} wrong answers`;
+		
   }
   const quizContainer = document.getElementById('quiz');
   const resultsContainer = document.getElementById('results');
@@ -131,6 +131,6 @@
   // Starting the Quiz
   buildQuiz();
 
-  // Event listeners
+  //  listeners Event
   submitButton.addEventListener('click', showResults);
 })();
