@@ -7,13 +7,13 @@
     myQuestions.forEach(
       (currentQuestion, questionNumber) => {
 
-        // variable to store the list of possible answers
+        // Array that stores the list of possible answers
         const answers = [];
 
-        // and for each available answer...
+        // Loop for each  answer
         for(letter in currentQuestion.answers){
 
-          // ...add an HTML radio button
+          // Set up HTML radio button for the player selection
           answers.push(
             `<label>
               <input type="radio" name="question${questionNumber}" value="${letter}">
@@ -23,7 +23,7 @@
           );
         }
 
-        // add this question and its answers to the output
+        // Adding  question & its answers to the output
         output.push(
           `<div class="question"> ${currentQuestion.question} </div>
           <div class="answers"> ${answers.join('')} </div>`
@@ -39,7 +39,10 @@
 
     // gather answer containers from our quiz
     const answerContainers = quizContainer.querySelectorAll('.answers');
-
+	
+	// Declaration of variable point by each question
+	let point = 25;
+	
     // keep track of user's answers
     let numCorrect = 0;
 
@@ -55,9 +58,9 @@
       if(userAnswer === currentQuestion.correctAnswer){
         // add to the number of correct answers
         numCorrect++;
-
+		
         // color the answers green
-        answerContainers[questionNumber].style.color = 'lightgreen';
+        answerContainers[questionNumber].style.color = 'green';
       }
       // if answer is wrong or blank
       else{
@@ -66,79 +69,71 @@
       }
     });
 
-    // show number of correct answers out of total
-    resultsContainer.innerHTML = `${numCorrect} out of ${myQuestions.length}`;
-  }
-
+		numCo = numCorrect * point;
+		
+		
+	if (numCo < 50){
+	    //console.log('failed the test, Your Total Score is '+numCo);
+		 window.alert("You failed the test yr score  " +numCo)
+	}else{
+		 window.alert("Congratulation you succeed the test the test yr score  " +numCo)
+	    //console.log('Congratulation !!! , Your Total Score is '+numCo);
+		window.location = 'file:///C:QuizProject/CongratulationPage.html'; 
+	}
+	 
+	 
+	    resultsContainer.innerHTML = `Your correct answers is  ${numCorrect}  out  of  ${myQuestions.length} wrong answers` ;
+   		
+		
+	}
   const quizContainer = document.getElementById('quiz');
   const resultsContainer = document.getElementById('results');
   const submitButton = document.getElementById('submit');
   const myQuestions = [
     {
-      question: "Who invented JavaScript?",
+      question: "What year were soccer rules codified ?",
       answers: {
-        a: "Douglas Crockford",
-		b: "Brendan Eich",
-        c: "Sheryl Sandberg"
+        a: " 1862 ",
+		b: " 1863 ",
+        c: " 1864 "
         },
-      correctAnswer: "c"
+      correctAnswer: "b"
+    },
+    {	
+      question: " How many panels are there on a traditional soccer ball ? ",
+      answers: {
+        a: " 32 panels ",
+        b: " 33 panels",
+        c: " 34 panels"
+      },
+      correctAnswer: "a"
     },
     {
-      question: "Which one of these is a JavaScript package manager?",
+      question: " Who was the first English player to win league titles in four countries ?",
       answers: {
-        a: "Node.js",
-        b: "TypeScript",
-        c: "npm"
-      },
-      correctAnswer: "c"
-    },
-    {
-      question: "Which tool can you use to ensure code quality?",
-      answers: {
-        a: "Angular",
-        b: "jQuery",
-        c: "RequireJS",
-        d: "ESLint"
+        a: " Frand Lampard",
+        b: " Steven Gerrard",
+        c: " Rahim sterling",
+        d: " David Beckham"
       },
       correctAnswer: "d"
     },
 	{
-      question: "Which tool can you use to ensure code quality?",
+      question: " What other team competes against Real Madrid in “The Classic” ?",
       answers: {
-        a: "Angular",
-        b: "jQuery",
-        c: "RequireJS",
-        d: "ESLint"
+        a: "Barcalona",
+        b: "Getafe",
+        c: "Atletico Madrid",
+        d: "VillaReal"
       },
-      correctAnswer: "d"
+      correctAnswer: "a"
     },
-	{
-      question: "Which tool can you use to ensure code quality?",
-      answers: {
-        a: "Angular",
-        b: "jQuery",
-        c: "RequireJS",
-        d: "ESLint"
-      },
-      correctAnswer: "d"
-    },
-	{
-      question: "Which tool can you use to ensure code quality?",
-      answers: {
-        a: "Angular",
-        b: "jQuery",
-        c: "RequireJS",
-        d: "ESLint"
-      },
-      correctAnswer: "d"
-    },
-	
 	
   ];
 
-  // Kick things off
+  // Starting the Quiz
   buildQuiz();
 
-  // Event listeners
+  //  listeners Event
   submitButton.addEventListener('click', showResults);
 })();
