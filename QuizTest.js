@@ -39,7 +39,10 @@
 
     // gather answer containers from our quiz
     const answerContainers = quizContainer.querySelectorAll('.answers');
-
+	
+	// Declaration of variable point by each question
+	let point = 25;
+	
     // keep track of user's answers
     let numCorrect = 0;
 
@@ -66,16 +69,17 @@
       }
     });
 
-    // show number of correct answers out of total
-        resultsContainer.innerHTML = `You score is ${numCorrect}  out ${myQuestions.length}`;
+		numCo = numCorrect * point;
+    
+		// Display the number of the correct answers 
+        resultsContainer.innerHTML = `Your correct answers is  ${numCorrect}  out  of  ${myQuestions.length} wrong answers`;
 		
-		numCo = numCorrect * 25
-		if (numCo < 50)
-		   console.log('failed the test, Your Total Score is '+numCo);
-		else
-		   console.log('Congratulation !!! , Your Total Score is '+numCo);
-	   
-			 
+	if (numCo < 50)
+	    //console.log('failed the test, Your Total Score is '+numCo);
+		 window.alert("You failed the test yr score  " +numCo)
+	else
+		 window.alert("Congratulation you succeed the test the test yr score  " +numCo)
+	    //console.log('Congratulation !!! , Your Total Score is '+numCo);
 			
 
   }
@@ -125,7 +129,7 @@
 	
   ];
 
-  // Kick things off
+  // Starting the Quiz
   buildQuiz();
 
   // Event listeners
