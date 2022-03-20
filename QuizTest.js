@@ -72,17 +72,20 @@
 		numCo = numCorrect * point;
 		
 		
-	if (numCo < 50)
+	if (numCo < 50){
 	    //console.log('failed the test, Your Total Score is '+numCo);
 		 window.alert("You failed the test yr score  " +numCo)
-	else
+	}else{
 		 window.alert("Congratulation you succeed the test the test yr score  " +numCo)
 	    //console.log('Congratulation !!! , Your Total Score is '+numCo);
-			
-		// Display the number of the correct answers 
-        resultsContainer.innerHTML = `Your correct answers is  ${numCorrect}  out  of  ${myQuestions.length} wrong answers`;
+		window.location = 'file:///C:QuizProject/CongratulationPage.html'; 
+	}
+	 
+	 
+	    resultsContainer.innerHTML = `Your correct answers is  ${numCorrect}  out  of  ${myQuestions.length} wrong answers` ;
+   		
 		
-  }
+	}
   const quizContainer = document.getElementById('quiz');
   const resultsContainer = document.getElementById('results');
   const submitButton = document.getElementById('submit');
@@ -96,7 +99,7 @@
         },
       correctAnswer: "b"
     },
-    {
+    {	
       question: " How many panels are there on a traditional soccer ball ? ",
       answers: {
         a: " 32 panels ",
