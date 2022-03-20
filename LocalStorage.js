@@ -15,13 +15,13 @@ function DataStorage(){
 	  alert("This Email address already exist in our Storage");
 	}
 		if (name==null || name=="" || psw==null || psw=="" ){  
-		   alert("UserName or Password can't be blank Please try again");  
+		   alert(" Name or Password cannot be blank Please try again. ");  
 		   return false;
 		}else if (email==null || email==""  ){  
 		   alert(" Email address cannot be empty");  
 		   return false;   
 		}else if(psw.length<6 || psw.length>18){  
-		   alert(" Password should be between 6 and 18 characters .");  
+		   alert(" Password should be between 6 and 18 characters Try again.");  
 		   return false;  
 		}
 	else{
