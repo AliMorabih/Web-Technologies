@@ -1,49 +1,38 @@
 body {
 
   margin: 0;
-
   padding: 0;
-
   max-width: inherit;
-
+  font-family: arial;
   background: #1D2846;
-
   color: #4a4a4a;
-
 }
 
 header {
 
   font-size: large;
-
   text-align: center;
-
+  font-family: arial;
   padding: 3em 0;
-
   background-color: #242331;
-
   color: #f9f9f9;
-  
-
 }
 footer {
 
   font-size: large;
-
   text-align: center;
-
+  font-family: arial;
   padding: 1.4em 0;
-
   background-color: #242331;
-
   color: #f9f9f9;
 
 }
 
 nav {
 
-	background: #242331;
-	color: #f9f9f9;
+   background: #242331;
+   color: #f9f9f9;
+   font-family: arial;
 
 	}
 
@@ -51,30 +40,27 @@ main {
 
 	background: #242331;
 	color: #f9f9f9;
-
-	}
+	font-family: arial;
+}
 
 aside {  
-	background: #242331;
-	color: #f9f9f9;
+  background: #242331;
+  color: #f9f9f9;
+  font-family: arial;
 }
 
 body {
 
   display: grid;
-
   min-height: 100vh;
-
+  font-family: arial;
   grid-template-columns: 300px 1fr 250px;
-
   grid-template-rows: min-content 1fr min-content;
-
 }
 
 header {
 
   grid-row: 1;
-
   grid-column: 1 / 4;
 
 }
@@ -82,37 +68,35 @@ header {
 nav {
 
   grid-row: 2;
-
   grid-column: 1 / 2;
-
   padding: 0 10px;
+  font-family: arial;
+
 
 }
 
 main {
 
   grid-row: 2;
-
   grid-column: 2 / 3;
-
   padding: 0 20px;
+  font-family: arial;
 
 }
 
 aside {
 
   grid-row: 2;
-
   grid-column: 3 / 4;
-
   padding: 0 10px;
+  font-family: arial;
 
 }
 
 footer {
 
   grid-row: 3;
-
+  font-family: arial;
   grid-column: 1 / 4;
 
 }
@@ -150,20 +134,21 @@ hr{
 	border: 0;
 	border-top: 1px solid #ccc;
 	margin-bottom: 40px;
-}
+	}
 div.container{
 	width: 900px;
 	height: 610px;
 	margin:35px auto;
 	float:right;
 	font-family: 'Raleway', sans-serif;
+
 }
 div.main{
 	width: 300px;
 	padding: 10px 50px 25px;
 	border: 2px solid gray;
 	border-radius: 10px;
-	font-family: raleway;
+	font-family: arial;
 	float:left;
 	margin-top:50px;
 }
@@ -183,10 +168,11 @@ input[type=text],input[type=password],input[type=email]{
 label{
 	color: #464646;
 	text-shadow: 0 1px 0 #fff;
-	font-size: large;
+	font-size: 15px;
 	padding: 1.4em 0;
 	background-color: #242331;
 	color: #f9f9f9;
+	
 }
 center{
 	font-size:32px;
@@ -223,18 +209,17 @@ input[type=button]:hover{
 }
 
 .question{
-    font-size: 25px;
-	font-weight: 1000;
+    font-size: 20px;
+	font-weight: 50;
 	text-align: left;
 	font-style: normal;
 
 }
 .answers {
-    font-size: 25px;
-	margin-bottom: 20px;
+    font-size: 20px;
+	font-weight: 50;
 	text-align: left;
 	font-style: normal;
-
 }
 .answers label{
 	display: block;
