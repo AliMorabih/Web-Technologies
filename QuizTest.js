@@ -72,7 +72,7 @@
 		numCo = numCorrect * point;
 		
 		
-	if (numCo < 50){
+	if (numCo < 99){
 	    //console.log('failed the test, Your Total Score is '+numCo);
 		 window.alert("You failed the test yr score  " +numCo)
 	}else{
