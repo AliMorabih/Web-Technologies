@@ -1,5 +1,4 @@
 body {
-
   margin: 0;
   padding: 0;
   max-width: inherit;
@@ -7,42 +6,34 @@ body {
   background: #1D2846;
   color: #4a4a4a;
 }
-
 header {
-
   font-size: large;
   text-align: center;
   font-family: arial;
-  padding: 3em 0;
+  padding: 4em 0;
   background-color: #242331;
   color: #f9f9f9;
 }
 footer {
-
   font-size: large;
   text-align: center;
   font-family: arial;
   padding: 1.4em 0;
   background-color: #242331;
   color: #f9f9f9;
-
 }
-
 nav {
-
    background: #242331;
    color: #f9f9f9;
    font-family: arial;
-
-	}
-
+}
 main {  
-
 	background: #242331;
 	color: #f9f9f9;
 	font-family: arial;
+	
+	
 }
-
 aside {  
   background: #242331;
   color: #f9f9f9;
@@ -50,7 +41,6 @@ aside {
 }
 
 body {
-
   display: grid;
   min-height: 100vh;
   font-family: arial;
@@ -66,41 +56,28 @@ header {
 }
 
 nav {
-
   grid-row: 2;
   grid-column: 1 / 2;
   padding: 0 10px;
   font-family: arial;
-
-
 }
-
-main {
-
-  grid-row: 2;
-  grid-column: 2 / 3;
-  padding: 0 20px;
-  font-family: arial;
-
+main{
+   grid-row: 2;
+   grid-column: 2 / 3;
+   padding: 0 10px;
+   font-family: arial;
 }
-
 aside {
-
-  grid-row: 2;
-  grid-column: 3 / 4;
-  padding: 0 10px;
-  font-family: arial;
-
+   grid-row: 2;
+   grid-column: 3 / 4;
+   padding: 0 10px;
+   font-family: arial;
 }
-
 footer {
-
-  grid-row: 3;
-  font-family: arial;
-  grid-column: 1 / 4;
-
+   grid-row: 3;
+   font-family: arial;
+   grid-column: 1 / 4;
 }
-
 ul {
 	list-style-type: none;
 	margin: 0;
@@ -128,20 +105,18 @@ li a:hover:not(.active) {
 .active {
     background-color: #27FB6B;
 }
-
 hr{
 	margin: 10px -50px;
 	border: 0;
 	border-top: 1px solid #ccc;
 	margin-bottom: 40px;
-	}
+}
 div.container{
 	width: 900px;
 	height: 610px;
 	margin:35px auto;
 	float:right;
 	font-family: 'Raleway', sans-serif;
-
 }
 div.main{
 	width: 300px;
@@ -166,19 +141,17 @@ input[type=text],input[type=password],input[type=email]{
 	border-radius: 5px;
 }
 label{
-	color: #464646;
+	
 	text-shadow: 0 1px 0 #fff;
 	font-size: 15px;
 	padding: 1.4em 0;
-	background-color: #242331;
-	color: #f9f9f9;
 	
 }
 center{
-	font-size:32px;
+   font-size:32px;
 }
 .note{
-	color:red;
+   color:red;
 }
 .valid{
 	color:green;
@@ -207,13 +180,11 @@ input[type=button]{
 input[type=button]:hover{
 	background: linear-gradient(#ffdd7f 5%, #ffbc00 100%);
 }
-
 .question{
     font-size: 20px;
 	font-weight: 50;
 	text-align: left;
 	font-style: normal;
-
 }
 .answers {
     font-size: 20px;
