@@ -100,10 +100,10 @@ li a {
 	text-decoration: none;
 }
 li a:hover:not(.active) {
-    background-color: #111;
+    background-color: #3165ae;
 }
 .active {
-    background-color: #27FB6B;
+    background-color: #3165ae;
 }
 hr{
 	margin: 10px -50px;
