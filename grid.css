@@ -31,9 +31,6 @@ main {
 	background: #242331;
 	color: #f9f9f9;
 	font-family: arial;
-	 
-	
-	
 }
 aside {  
   background: #242331;
@@ -73,9 +70,10 @@ main{
    font-family: "enzo_otmedium";
    font-style : normal;
    font-weight : normal;
-   padding:0;
-   font-size:16px;
+   font-size:normal;
+   padding:2;
    line-height:1.6;
+
 
 }
 aside {
@@ -136,12 +134,13 @@ div.container{
 }
 div.main{
 	width: 300px;
-	padding: 10px 50px 25px;
+	padding: 4px 40px 25px;
 	border: 2px solid gray;
 	border-radius: 10px;
-	font-family: arial;
+	font-family: "enzo_otmedium";
 	float:left;
-	margin-top:10px;
+	margin-top:-9px;
+	font-size:16px;
 }
 input[type=text],input[type=password],input[type=email]{
 	width: 100%;
