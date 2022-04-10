@@ -74,7 +74,7 @@
 		
 	if (numCo < 99){
 	    //console.log('failed the test, Your Total Score is '+numCo);
-		 window.alert("You failed the test yr score  " +numCo)
+		 window.alert("You failed the test your score is  " +numCo)
 	}else{
 	    //console.log('Congratulation !!! , Your Total Score is '+numCo);
 		window.location = 'file:///C:QuizProject/CongratulationPage.html'; 

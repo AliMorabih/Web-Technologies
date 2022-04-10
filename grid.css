@@ -160,7 +160,8 @@ label{
 	text-shadow: 0 1px 0 #fff;
 	font-size: 15px;
 	padding: 1.4em 0;
-	
+	font-family: "enzo_otmedium";
+
 }
 center{
    font-size:32px;
@@ -206,6 +207,8 @@ input[type=button]:hover{
 	font-weight: 50;
 	text-align: left;
 	font-style: normal;
+	font-family: "enzo_otmedium";
+
 }
 .answers label{
 	display: block;
