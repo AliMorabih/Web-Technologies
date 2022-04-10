@@ -41,7 +41,7 @@
     const answerContainers = quizContainer.querySelectorAll('.answers');
 	
 	// Declaration of variable point by each question
-	let point = 25;
+	let point = 10;
 	
     // keep track of user's answers
     let numCorrect = 0;
@@ -129,7 +129,66 @@
       },
       correctAnswer: "a"
     },
-	
+	{
+      question: " What other team competes against Real Madrid in “The Classic” ?",
+      answers: {
+        a: "Barcalona",
+        b: "Getafe",
+        c: "Atletico Madrid",
+        d: "VillaReal"
+      },
+      correctAnswer: "a"
+    },
+	{
+      question: " What other team competes against Real Madrid in “The Classic” ?",
+      answers: {
+        a: "Barcalona",
+        b: "Getafe",
+        c: "Atletico Madrid",
+        d: "VillaReal"
+      },
+      correctAnswer: "a"
+    },
+	{
+      question: " What other team competes against Real Madrid in “The Classic” ?",
+      answers: {
+        a: "Barcalona",
+        b: "Getafe",
+        c: "Atletico Madrid",
+        d: "VillaReal"
+      },
+      correctAnswer: "a"
+    },
+	{
+      question: " What other team competes against Real Madrid in “The Classic” ?",
+      answers: {
+        a: "Barcalona",
+        b: "Getafe",
+        c: "Atletico Madrid",
+        d: "VillaReal"
+      },
+      correctAnswer: "a"
+    },
+	{
+      question: " What other team competes against Real Madrid in “The Classic” ?",
+      answers: {
+        a: "Barcalona",
+        b: "Getafe",
+        c: "Atletico Madrid",
+        d: "VillaReal"
+      },
+      correctAnswer: "a"
+    },
+	{
+      question: " What other team competes against Real Madrid in “The Classic” ?",
+      answers: {
+        a: "Barcalona",
+        b: "Getafe",
+        c: "Atletico Madrid",
+        d: "VillaReal"
+      },
+      correctAnswer: "a"
+    },
   ];
 
   // Starting the Quiz
