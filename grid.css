@@ -156,13 +156,13 @@ input[type=text],input[type=password],input[type=email]{
 	border-radius: 5px;
 }
 label{
-	
-	text-shadow: 0 1px 0 #fff;
-	font-size: 15px;
-	padding: 1.4em 0;
+	font-size: 20px;
+	font-weight: 50;
+	text-align: left;
+	font-style: normal;
+	padding: 0.2em 0;
 	font-family: "enzo_otmedium";
-
-}
+	}
 center{
    font-size:32px;
 }
