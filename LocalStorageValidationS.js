@@ -17,7 +17,7 @@ function SignIn()
 	  let current_user=user_records.filter((v)=>{return v.email==email && v.psw==psw})[0]
 	 localStorage.setItem('name',current_user.name);
 	 localStorage.setItem('email',current_user.email);
-	  window.location.href='file:///C:QuizProject/QuizPage.html'
+	  window.location.href='QuizPage.html'
 	}
 	else
 	{
