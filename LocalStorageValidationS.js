@@ -18,6 +18,7 @@ function SignIn()
 	 localStorage.setItem('name',current_user.name);
 	 localStorage.setItem('email',current_user.email);
 	  window.location.href='QuizPage.html'
+	  
 	}
 	else
 	{

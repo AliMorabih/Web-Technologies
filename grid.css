@@ -216,7 +216,7 @@ input[type=button]:hover{
 #submit{
 	font-family: sans-serif;
 	font-size: 20px;
-	background-color: #279;
+	background-color: #ffbc00;
 	color: #fff;
 	border: 0px;
 	border-radius: 3px;
@@ -225,7 +225,7 @@ input[type=button]:hover{
 	margin-bottom: 20px;
 }
 #submit:hover{
-	background-color: #38a;
+	background: linear-gradient(#ffdd7f 5%, #ffbc00 100%);
 }
 
 

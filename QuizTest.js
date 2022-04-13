@@ -1,19 +1,16 @@
 (function(){
   function buildQuiz(){
-    // variable to store the HTML output
+    // Declaration of variable allow us to store the HTML output
     const output = [];
 
-    // for each question...
+    // for each questions
     myQuestions.forEach(
       (currentQuestion, questionNumber) => {
-
-        // Array that stores the list of possible answers
+        // Array will be storing the list of possible answers
         const answers = [];
-
         // Loop for each  answer
         for(letter in currentQuestion.answers){
-
-          // Set up HTML radio button for the player selection
+          // Seting up an html radio button to allow the player to make a selection selection
           answers.push(
             `<label>
               <input type="radio" name="question${questionNumber}" value="${letter}">
@@ -22,7 +19,6 @@
             </label>`
           );
         }
-
         // Adding  question & its answers to the output
         output.push(
           `<div class="question"> ${currentQuestion.question} </div>
@@ -49,49 +45,43 @@
     // for each question...
     myQuestions.forEach( (currentQuestion, questionNumber) => {
 
-      // find selected answer
+    // find selected answer
       const answerContainer = answerContainers[questionNumber];
       const selector = `input[name=question${questionNumber}]:checked`;
       const userAnswer = (answerContainer.querySelector(selector) || {}).value;
 
       // if answer is correct
       if(userAnswer === currentQuestion.correctAnswer){
-        // add to the number of correct answers
+        // adding the numbers of all correct answers
         numCorrect++;
 		
-        // color the answers green
+      // We will color the correct answers with yellow
         answerContainers[questionNumber].style.color = 'yellow';
       }
       // if answer is wrong or blank
       else{
-        // color the answers red
+      // We will color the wrong answers with red
         answerContainers[questionNumber].style.color = 'red';
       }
     });
-
 		numCo = numCorrect * point;
-		
 		
 	if (numCo < 99){
 	    //console.log('failed the test, Your Total Score is '+numCo);
-		 window.alert("You failed the test your score is  " +numCo)
+		 window.alert("Please try again, You failed the test your score is  " +numCo)
 	}else{
 	    //console.log('Congratulation !!! , Your Total Score is '+numCo);
 		window.location = 'file:///C:QuizProject/CongratulationPage.html'; 
 		window.alert(" Your score  is " +numCo)
 
 	}
-	 
-	 
 	resultsContainer.innerHTML = `Your correct answers is  ${numCorrect}  out  of  ${myQuestions.length} wrong answers` ;
-   		
-		
-	}
-  const quizContainer = document.getElementById('quiz');
-  const resultsContainer = document.getElementById('results');
-  const submitButton = document.getElementById('submit');
-  const myQuestions = [
-    {
+   	}
+	const quizContainer = document.getElementById('quiz');
+	const resultsContainer = document.getElementById('results');
+	const submitButton = document.getElementById('submit');
+	const myQuestions = [
+		{
       question: "What year were soccer rules codified ?",
       answers: {
         a: " 1862 ",
@@ -191,7 +181,7 @@
     },
   ];
 
-  // Starting the Quiz
+  // Starting up the Soccer quiz Test
   buildQuiz();
 
   //  listeners Event
