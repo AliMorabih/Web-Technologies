@@ -2,7 +2,6 @@
   function buildQuiz(){
     // Declaration of variable allow us to store the HTML output
     const output = [];
-
     // for each questions
     myQuestions.forEach(
       (currentQuestion, questionNumber) => {
@@ -26,10 +25,9 @@
         );
       }
     );
-
     // finally combine our output list into one string of HTML and put it on the page
     quizContainer.innerHTML = output.join('');
-  }
+	}
 
   function showResults(){
 
@@ -69,11 +67,11 @@
 	if (numCo < 99){
 	    //console.log('failed the test, Your Total Score is '+numCo);
 		 window.alert("Please try again, You failed the test your score is  " +numCo)
+
 	}else{
 	    //console.log('Congratulation !!! , Your Total Score is '+numCo);
-		window.location = 'file:///C:QuizProject/CongratulationPage.html'; 
+		window.location = 'CongratulationPage.html'; 
 		window.alert(" Your score  is " +numCo)
-
 	}
 	resultsContainer.innerHTML = `Your correct answers is  ${numCorrect}  out  of  ${myQuestions.length} wrong answers` ;
    	}
@@ -81,7 +79,7 @@
 	const resultsContainer = document.getElementById('results');
 	const submitButton = document.getElementById('submit');
 	const myQuestions = [
-		{
+	{
       question: "What year were soccer rules codified ?",
       answers: {
         a: " 1862 ",
