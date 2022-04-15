@@ -10,12 +10,15 @@ header {
   font-size: large;
   text-align: center;
   font-family: arial;
-  padding: 4em 0;
+  padding: 0em 0;
   background-color: #242331;
   color: #f9f9f9;
 }
 footer {
-  font-size: large;
+  grid-row: 3;
+  font-family: arial;
+  grid-column: 1 / 4;
+  font-size: small;
   text-align: center;
   font-family: arial;
   padding: 1.4em 0;
@@ -26,11 +29,13 @@ nav {
    background: #242331;
    color: #f9f9f9;
    font-family: arial;
+
 }
 main {  
 	background: #242331;
 	color: #f9f9f9;
 	font-family: arial;
+  
 }
 aside {  
   background: #242331;
@@ -44,6 +49,8 @@ body {
   font-family: arial;
   grid-template-columns: 300px 1fr 250px;
   grid-template-rows: min-content 1fr min-content;
+  
+  
 }
 
 header {
@@ -87,11 +94,7 @@ aside {
    font-size:16px;
    line-height:1.6;
 }
-footer {
-   grid-row: 3;
-   font-family: arial;
-   grid-column: 1 / 4;
-}
+
 ul {
 	list-style-type: none;
 	margin: 0;
