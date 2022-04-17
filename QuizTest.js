@@ -66,14 +66,13 @@
 		
 	if (numCo < 99){
 	    //console.log('failed the test, Your Total Score is '+numCo);
-		 window.alert("Please try again, You failed the test your score is  " +numCo)
 
 	}else{
 	    //console.log('Congratulation !!! , Your Total Score is '+numCo);
 		window.location = 'CongratulationPage.html'; 
 		window.alert(" Your score  is " +numCo)
 	}
-	resultsContainer.innerHTML = `Your correct answers is  ${numCorrect}  out  of  ${myQuestions.length} wrong answers` ;
+	resultsContainer.innerHTML = "Your have failed the Quiz &#128542, your Score is : " +numCo  ;
    	}
 	const quizContainer = document.getElementById('quiz');
 	const resultsContainer = document.getElementById('results');
