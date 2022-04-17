@@ -49,10 +49,7 @@ body {
   font-family: arial;
   grid-template-columns: 300px 1fr 250px;
   grid-template-rows: min-content 1fr min-content;
-  
-  
 }
-
 header {
 
   grid-row: 1;
@@ -233,6 +230,21 @@ input[type=button]:hover{
 	background: linear-gradient(#ffdd7f 5%, #ffbc00 100%);
 }
 
+#TryAgain{
+	font-family: sans-serif;
+	font-size: 20px;
+	background-color: #ffbc00;
+	color: #fff;
+	border-radius: 3px;
+	padding: 20px;
+	cursor: pointer;
+	margin-bottom: 20px;
+	border: 1px solid #e5a900;
+	font-weight: normal;
 
+}
+#TryAgain:hover{
+	background: linear-gradient(#ffdd7f 5%, #ffbc00 100%);
+}
 
 

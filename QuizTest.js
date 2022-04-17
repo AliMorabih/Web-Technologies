@@ -70,13 +70,15 @@
 	}else{
 	    //console.log('Congratulation !!! , Your Total Score is '+numCo);
 		window.location = 'CongratulationPage.html'; 
-		window.alert(" Your score  is " +numCo)
+		//window.alert(" Your score  is " +numCo)
 	}
-	resultsContainer.innerHTML = "Your have failed the Quiz &#128542, your Score is : " +numCo  ;
+	resultsContainer.innerHTML = "Your have failed the Quiz &#128542 Your Score is : " +numCo+ " % ";
+	
    	}
 	const quizContainer = document.getElementById('quiz');
 	const resultsContainer = document.getElementById('results');
 	const submitButton = document.getElementById('submit');
+	
 	const myQuestions = [
 	{
       question: "What year were soccer rules codified ?",
