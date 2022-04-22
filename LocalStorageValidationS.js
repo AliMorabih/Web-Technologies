@@ -21,7 +21,7 @@ function SignIn()
 	}
 	else
 	{
-	  alert('Login Fail');
+	  alert('Failed to Authenticate');
 	}
 
 }
