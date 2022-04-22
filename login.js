@@ -13,7 +13,7 @@ function validate(){
 		if (username == "Woldcup2022" && password == "Woldcup2022"){
 		alert ("Login successfully You will be Starting The Quiz Shortly");
 		// After the player enter a valid username and password we will redirect him to the Quiz page
-		window.location = "file:///C:/Users/Ali/OneDrive%20-%20Edinburgh%20Napier%20University/Desktop/PHP/QuizProject/QuizPage.html"; 
+		window.location = "QuizPage.html"; 
 		   return false;
 		}else{
 		attempt --;// Decrementing by one for each wrong password entered.
