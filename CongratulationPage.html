@@ -5,11 +5,9 @@
         <meta charset="UTF-8">
 </head>
  <body>
-
 			<canvas id="canv"></canvas>
 			<p > Congratulations You Have Answered All the Quiz Questions  &#128512 &#127941 &#127942  &#128079 </p>
-		
-		<bgsound src="file:///C:/QuizProject/Music.wav" loop="infinite">
+			<bgsound src="file:///C:/QuizProject/Music.wav" loop="infinite">
 
 <script>
 	window.frameAnimation = (function() { 	
@@ -54,8 +52,8 @@ function desin() {
     xD: genRandNum(_w - 900, _w + 900),
     yD: genRandNum(_h - 900, _h + 900),
     r: genRandNum(20, 80),
-    spX: genRandNum(-1, 1),
-    spY: genRandNum(-1, 1)
+    gRX: genRandNum(-1, 1),
+    gRY: genRandNum(-1, 1)
   };
 
 	dataSt.push(shoot);
@@ -77,8 +75,8 @@ function desin() {
     canC.globalCompositeOperation = 'lighter';
     canC.fill();
 
-    shoot.xD = shoot.xD + shoot.spX;
-    shoot.yD = shoot.yD + shoot.spY;
+    shoot.xD = shoot.xD + shoot.gRX;
+    shoot.yD = shoot.yD + shoot.gRY;
     shoot.r = shoot.r * 0.96;
   }
 }
