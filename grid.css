@@ -157,7 +157,7 @@ input[type=text],input[type=password],input[type=email]{
 label{
 	font-size: 16px;
 	font-weight: 50;
-	text-align: left;
+	text-align: left-side;
 	font-style: normal;
 	padding: 0.2em 0;
 	font-family: "enzo_otmedium";
