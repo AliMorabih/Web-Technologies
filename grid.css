@@ -35,7 +35,6 @@ main {
 	background: #242331;
 	color: #f9f9f9;
 	font-family: arial;
-  
 }
 aside {  
   background: #242331;
@@ -156,7 +155,7 @@ input[type=text],input[type=password],input[type=email]{
 	border-radius: 5px;
 }
 label{
-	font-size: 20px;
+	font-size: 16px;
 	font-weight: 50;
 	text-align: left;
 	font-style: normal;
@@ -197,7 +196,7 @@ input[type=button]:hover{
 	background: linear-gradient(#ffdd7f 5%, #ffbc00 100%);
 }
 .question{
-    font-size: 20px;
+    font-size: 16px;
 	font-weight: 50;
 	text-align: left;
 	font-style: normal;
