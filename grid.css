@@ -200,6 +200,7 @@ input[type=button]:hover{
 	font-weight: 50;
 	text-align: left;
 	font-style: normal;
+
 }
 .answers {
     font-size: 20px;
@@ -218,7 +219,7 @@ input[type=button]:hover{
 	background-color: #ffbc00;
 	color: #fff;
 	border-radius: 3px;
-	padding: 20px;
+	padding: 10px;
 	cursor: pointer;
 	margin-bottom: 20px;
 	border: 1px solid #e5a900;
@@ -235,7 +236,7 @@ input[type=button]:hover{
 	background-color: #ffbc00;
 	color: #fff;
 	border-radius: 3px;
-	padding: 20px;
+	padding: 10px;
 	cursor: pointer;
 	margin-bottom: 20px;
 	border: 1px solid #e5a900;
