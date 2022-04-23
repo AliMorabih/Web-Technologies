@@ -63,16 +63,51 @@
     });
 		numCo = correctN * po;
 		
-	if (numCo < 99){
+	//if (numCo < 99){
 	    //console.log('failed the test, Your Total Score is '+numCo);
 
-	}else{
+	//}else{
 	    //console.log('Congratulation !!! , Your Total Score is '+numCo);
+	// 	window.location = 'CongratulationPage.html'; 
+	//}
+	// resultsContainer.innerHTML = "Your have failed the Quiz &#128542 Your Score is : " +numCo+ " % ";
+	 
+	 
+	 
+		if (numCo < 60) {
+		  	resultsContainer.innerHTML = "Your have failed the Quiz &#128542 Your Score is : " +numCo+ " % ";
+
+		} else if (numCo < 99) {
+	 resultsContainer.innerHTML = " Your Score is : " +numCo+ " % ";
+		} else {
 		window.location = 'CongratulationPage.html'; 
-		//window.alert(" Your score  is " +numCo)
-	}
-	resultsContainer.innerHTML = "Your have failed the Quiz &#128542 Your Score is : " +numCo+ " % ";
-	}
+		}
+			 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 }
+	
+		
+		
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	const quizContainer = document.getElementById('quiz');
 	const resultsContainer = document.getElementById('results');
 	const submitAnswerPlayer = document.getElementById('submit');
