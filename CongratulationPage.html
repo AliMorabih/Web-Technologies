@@ -14,17 +14,17 @@
 	return window.animFrame ||  
 	
 function(backC) {
-      window.setTimeout(backC, 1000 / 1000);
+      window.setTimeout(backC, 1000 / 100);
     };
 })();
 	var can = document.getElementById('canv');
 	var canC = can.getContext('2d');
 	var w = can.width = window.innerWidth;
 	var h = can.height = window.innerHeight;
-	var _w = w * 0.9;
-	var _h = h * 0.9;
+	var _w = w * 0.2;
+	var _h = h * 0.3;
 	var dataSt = [];
-	var cnt = 0;
+	var ct = 0;
 
 	window.addEventListener('load', reDim);
 	window.addEventListener('reDim', reDim, false);
@@ -34,14 +34,14 @@ function reDim() {
 	can.height = h = window.innerHeight;
 	can.style.position = 'absolute';
 	can.style.left = (window.innerWidth - w) *
-    .01 + 'px';
+    .03 + 'px';
 	can.style.top = (window.innerHeight - h) *
-    .01 + 'px';
+    .03 + 'px';
 }
 
 function drAnim() {
-	cnt++;
-	if (cnt % 6) desin();
+	ct++;
+	if (ct % 6) desin();
 	window.animFrame(drAnim);
 }
 	drAnim();
@@ -80,14 +80,12 @@ function desin() {
     shoot.r = shoot.r * 0.96;
   }
 }
-
 function colorRand() {
 	var red = Math.floor(Math.random() * 8);
 	var green = Math.floor(Math.random() * 80);
 	var blue = Math.floor(Math.random() * 200);
 	return "rgb(" + red + "," + green + "," + blue + ")";
 }
-
 function genRandNum(minM, maxM) {
 	return Math.floor(Math.random() * (maxM - minM + 1)) + minM;
 }			
