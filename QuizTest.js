@@ -1,15 +1,15 @@
 (function(){
-  function buildQuiz(){
+  function generateQuiz(){
     // Declaration of variable allow us to store the HTML output
     const output = [];
     // for each questions
-    myQuestions.forEach(
+    questionQ.forEach(
       (currentQuestion, questionNumber) => {
         // Array will be storing the list of possible answers
         const answers = [];
         // Loop for each  answer
         for(letter in currentQuestion.answers){
-          // Seting up an html radio button to allow the player to make a selection selection
+          // Seting up an html radio button to allow the player to make a selection 
           answers.push(
             `<label>
               <input type="radio" name="question${questionNumber}" value="${letter}">
@@ -29,10 +29,10 @@
     quizContainer.innerHTML = output.join('');
 	}
 
-  function showResults(){
+  function displayD(){
 
     // gather answer containers from our quiz
-    const answerContainers = quizContainer.querySelectorAll('.answers');
+    const storeAnswers = quizContainer.querySelectorAll('.answers');
 	
 	// Declaration of variable point by each question
 	let point = 10;
@@ -41,25 +41,25 @@
     let numCorrect = 0;
 
     // for each question...
-    myQuestions.forEach( (currentQuestion, questionNumber) => {
+    questionQ.forEach( (currentQuestion, questionNumber) => {
 
     // find selected answer
-      const answerContainer = answerContainers[questionNumber];
+      const storeAnswer = storeAnswers[questionNumber];
       const selector = `input[name=question${questionNumber}]:checked`;
-      const userAnswer = (answerContainer.querySelector(selector) || {}).value;
+      const userAnswer = (storeAnswer.querySelector(selector) || {}).value;
 
       // if answer is correct
-      if(userAnswer === currentQuestion.correctAnswer){
+      if(userAnswer === currentQuestion.answerRight){
         // adding the numbers of all correct answers
         numCorrect++;
 		
       // We will color the correct answers with yellow
-        answerContainers[questionNumber].style.color = 'yellow';
+        storeAnswers[questionNumber].style.color = 'yellow';
       }
       // if answer is wrong or blank
       else{
       // We will color the wrong answers with red
-        answerContainers[questionNumber].style.color = 'red';
+        storeAnswers[questionNumber].style.color = 'red';
       }
     });
 		numCo = numCorrect * point;
@@ -73,13 +73,12 @@
 		//window.alert(" Your score  is " +numCo)
 	}
 	resultsContainer.innerHTML = "Your have failed the Quiz &#128542 Your Score is : " +numCo+ " % ";
-	
-   	}
+	}
 	const quizContainer = document.getElementById('quiz');
 	const resultsContainer = document.getElementById('results');
 	const submitButton = document.getElementById('submit');
 	
-	const myQuestions = [
+	const questionQ = [
 	{
       question: "What year were soccer rules codified ?",
       answers: {
@@ -87,7 +86,7 @@
 		b: " 1863 ",
         c: " 1864 "
         },
-      correctAnswer: "b"
+      answerRight: "b"
     },
     {	
       question: " How many panels are there on a traditional soccer ball ? ",
@@ -96,7 +95,7 @@
         b: " 33 panels",
         c: " 34 panels"
       },
-      correctAnswer: "a"
+      answerRight: "a"
     },
     {
       question: " Who was the first English player to win league titles in four countries ?",
@@ -106,7 +105,7 @@
         c: " Rahim sterling",
         d: " David Beckham"
       },
-      correctAnswer: "d"
+      answerRight: "d"
     },
 	{
       question: " What other team competes against Real Madrid in “The Classic” ?",
@@ -116,7 +115,7 @@
         c: "Atletico Madrid",
         d: "VillaReal"
       },
-      correctAnswer: "a"
+      answerRight: "a"
     },
 	{
       question: " What other team competes against Real Madrid in “The Classic” ?",
@@ -126,7 +125,7 @@
         c: "Atletico Madrid",
         d: "VillaReal"
       },
-      correctAnswer: "a"
+      answerRight: "a"
     },
 	{
       question: " What other team competes against Real Madrid in “The Classic” ?",
@@ -136,7 +135,7 @@
         c: "Atletico Madrid",
         d: "VillaReal"
       },
-      correctAnswer: "a"
+      answerRight: "a"
     },
 	{
       question: " What other team competes against Real Madrid in “The Classic” ?",
@@ -146,7 +145,7 @@
         c: "Atletico Madrid",
         d: "VillaReal"
       },
-      correctAnswer: "a"
+      answerRight: "a"
     },
 	{
       question: " What other team competes against Real Madrid in “The Classic” ?",
@@ -156,7 +155,7 @@
         c: "Atletico Madrid",
         d: "VillaReal"
       },
-      correctAnswer: "a"
+      answerRight: "a"
     },
 	{
       question: " What other team competes against Real Madrid in “The Classic” ?",
@@ -166,7 +165,7 @@
         c: "Atletico Madrid",
         d: "VillaReal"
       },
-      correctAnswer: "a"
+      answerRight: "a"
     },
 	{
       question: " What other team competes against Real Madrid in “The Classic” ?",
@@ -176,13 +175,13 @@
         c: "Atletico Madrid",
         d: "VillaReal"
       },
-      correctAnswer: "a"
+      answerRight: "a"
     },
   ];
 
   // Starting up the Soccer quiz Test
-  buildQuiz();
+  generateQuiz();
 
   //  listeners Event
-  submitButton.addEventListener('click', showResults);
+  submitButton.addEventListener('click', displayD);
 })();
