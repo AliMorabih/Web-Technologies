@@ -2,7 +2,6 @@
   function generateQuiz(){
     // Declaration of variable allow us to store the HTML output
     const output = [];
-    // for each questions
     questionQ.forEach(
       (currentQuestion, questionNumber) => {
         // Array will be storing the list of possible answers
@@ -34,24 +33,24 @@
     // gather answer containers from our quiz
     const storeAnswers = quizContainer.querySelectorAll('.answers');
 	
-	// Declaration of variable point by each question
-	let point = 10;
+	// Declaration of variable point for each correct answer
+	let po = 10;
 	
-    // keep track of user's answers
-    let numCorrect = 0;
+    // keep tracking the correct answers
+    let correctN = 0;
 
-    // for each question...
+    // for each question
     questionQ.forEach( (currentQuestion, questionNumber) => {
 
     // find selected answer
       const storeAnswer = storeAnswers[questionNumber];
       const selector = `input[name=question${questionNumber}]:checked`;
-      const userAnswer = (storeAnswer.querySelector(selector) || {}).value;
+      const playerSelection = (storeAnswer.querySelector(selector) || {}).value;
 
       // if answer is correct
-      if(userAnswer === currentQuestion.answerRight){
+      if(playerSelection === currentQuestion.answerRight){
         // adding the numbers of all correct answers
-        numCorrect++;
+        correctN++;
 		
       // We will color the correct answers with yellow
         storeAnswers[questionNumber].style.color = 'yellow';
@@ -62,7 +61,7 @@
         storeAnswers[questionNumber].style.color = 'red';
       }
     });
-		numCo = numCorrect * point;
+		numCo = correctN * po;
 		
 	if (numCo < 99){
 	    //console.log('failed the test, Your Total Score is '+numCo);
@@ -76,7 +75,7 @@
 	}
 	const quizContainer = document.getElementById('quiz');
 	const resultsContainer = document.getElementById('results');
-	const submitButton = document.getElementById('submit');
+	const submitAnswerPlayer = document.getElementById('submit');
 	
 	const questionQ = [
 	{
@@ -183,5 +182,5 @@
   generateQuiz();
 
   //  listeners Event
-  submitButton.addEventListener('click', displayD);
+  submitAnswerPlayer.addEventListener('click', displayD);
 })();
