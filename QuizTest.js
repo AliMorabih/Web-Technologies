@@ -72,41 +72,15 @@
 	//}
 	// resultsContainer.innerHTML = "Your have failed the Quiz &#128542 Your Score is : " +numCo+ " % ";
 	 
-	 
-	 
-		if (numCo < 60) {
+	 	if (numCo < 80) {
 		  	resultsContainer.innerHTML = "Your have failed the Quiz &#128542 Your Score is : " +numCo+ " % ";
 
 		} else if (numCo < 99) {
-	 resultsContainer.innerHTML = " Your Score is : " +numCo+ " % ";
+			resultsContainer.innerHTML = "Your succeed the Quiz and you win a &#127941 your score is : " +numCo+ " % ";
 		} else {
-		window.location = 'CongratulationPage.html'; 
+			window.location = 'CongratulationPage.html'; 
 		}
-			 
-	 
-	 
-	 
-	 
-	 
-	 
-	 
-	 
-	 
-	 
 	 }
-	
-		
-		
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	
 	const quizContainer = document.getElementById('quiz');
 	const resultsContainer = document.getElementById('results');
