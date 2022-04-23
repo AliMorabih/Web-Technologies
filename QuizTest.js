@@ -3,23 +3,23 @@
     // Declaration of variable allow us to store the HTML output
     const output = [];
     questionQ.forEach(
-      (currentQuestion, questionNumber) => {
+      (questionC, questionNumber) => {
         // Array will be storing the list of possible answers
         const answers = [];
         // Loop for each  answer
-        for(letter in currentQuestion.answers){
+        for(letter in questionC.answers){
           // Seting up an html radio button to allow the player to make a selection 
           answers.push(
             `<label>
               <input type="radio" name="question${questionNumber}" value="${letter}">
               ${letter} :
-              ${currentQuestion.answers[letter]}
+              ${questionC.answers[letter]}
             </label>`
           );
         }
         // Adding  question & its answers to the output
         output.push(
-          `<div class="question"> ${currentQuestion.question} </div>
+          `<div class="question"> ${questionC.question} </div>
           <div class="answers"> ${answers.join('')} </div>`
         );
       }
@@ -40,7 +40,7 @@
     let correctN = 0;
 
     // for each question
-    questionQ.forEach( (currentQuestion, questionNumber) => {
+    questionQ.forEach( (questionC, questionNumber) => {
 
     // find selected answer
       const storeAnswer = storeAnswers[questionNumber];
@@ -48,7 +48,7 @@
       const playerSelection = (storeAnswer.querySelector(selector) || {}).value;
 
       // if answer is correct
-      if(playerSelection === currentQuestion.answerRight){
+      if(playerSelection === questionC.answerRight){
         // adding the numbers of all correct answers
         correctN++;
 		
