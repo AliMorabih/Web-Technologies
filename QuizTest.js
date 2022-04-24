@@ -97,7 +97,7 @@
       answerRight: "b"
     },
     {	
-      question: " How many panels are there on a traditional soccer ball ? ",
+      question: " How many panels are there on a soccer ball ? ",
       answers: {
         a: " 32 panels ",
         b: " 33 panels",
@@ -106,84 +106,82 @@
       answerRight: "a"
     },
     {
-      question: " Who was the first English player to win league titles in four countries ?",
+      question: " Who was the first English player who win the league titles in four countries ?",
       answers: {
         a: " Frand Lampard",
-        b: " Steven Gerrard",
-        c: " Rahim sterling",
-        d: " David Beckham"
+        b: " David Beckham",
+        c: " Rahim sterling"
+      },
+      answerRight: "b"
+    },
+	{
+      question: " what is the name of liverpool fans  ?",
+      answers: {
+        a: "Kopites",
+        b: "Culés",
+        c: "Vikingos"       
+      },
+      answerRight: "a"
+    },
+	{
+      question: " What other team competes against Real Madrid in “The Classic” ?",
+      answers: {
+        a: "Barcelona",
+        b: "Getafe",
+        c: "Atletico Madrid",
+        d: "VillaReal"
+      },
+      answerRight: "a"
+    },
+	{
+      question: " which country will host fifa world cup 2022 ?",
+      answers: {
+        a: "Canada",
+        b: "Qatar",
+        c: "USA",
+        d: "England"
+      },
+      answerRight: "b"
+    },
+	{
+      question: " which team has the highest champions league trophy  ?",
+      answers: {
+        a: "Barcalona",
+        b: "Ac Milan",
+        c: "Real Madrid",
+        d: "Liverpool"
+      },
+      answerRight: "c"
+    },
+	{
+      question: " Who wins the Champions League 2021  ?",
+      answers: {
+        a: "Barcalona",
+        b: "Real Madrid",
+        c: "PSG",
+        d: "Chelsea F.C"
       },
       answerRight: "d"
     },
 	{
-      question: " What other team competes against Real Madrid in “The Classic” ?",
+      question: " how many trophy has pep guardiola won as manager ?",
       answers: {
-        a: "Barcalona",
-        b: "Getafe",
-        c: "Atletico Madrid",
-        d: "VillaReal"
+        a: "29 major trophies ",
+        b: "28 major trophies ",
+        c: "26 major trophies ",
+        d: "24 major trophies "
       },
       answerRight: "a"
     },
 	{
-      question: " What other team competes against Real Madrid in “The Classic” ?",
+      question: "  How old was the youngest professional soccer player ?",
       answers: {
-        a: "Barcalona",
-        b: "Getafe",
-        c: "Atletico Madrid",
-        d: "VillaReal"
+        a: "16",
+        b: "14",
+        c: "13",
+        d: "12"
       },
-      answerRight: "a"
-    },
-	{
-      question: " What other team competes against Real Madrid in “The Classic” ?",
-      answers: {
-        a: "Barcalona",
-        b: "Getafe",
-        c: "Atletico Madrid",
-        d: "VillaReal"
-      },
-      answerRight: "a"
-    },
-	{
-      question: " What other team competes against Real Madrid in “The Classic” ?",
-      answers: {
-        a: "Barcalona",
-        b: "Getafe",
-        c: "Atletico Madrid",
-        d: "VillaReal"
-      },
-      answerRight: "a"
-    },
-	{
-      question: " What other team competes against Real Madrid in “The Classic” ?",
-      answers: {
-        a: "Barcalona",
-        b: "Getafe",
-        c: "Atletico Madrid",
-        d: "VillaReal"
-      },
-      answerRight: "a"
-    },
-	{
-      question: " What other team competes against Real Madrid in “The Classic” ?",
-      answers: {
-        a: "Barcalona",
-        b: "Getafe",
-        c: "Atletico Madrid",
-        d: "VillaReal"
-      },
-      answerRight: "a"
-    },
-	{
-      question: " What other team competes against Real Madrid in “The Classic” ?",
-      answers: {
-        a: "Barcalona",
-        b: "Getafe",
-        c: "Atletico Madrid",
-        d: "VillaReal"
-      },
-      answerRight: "a"
+      answerRight: "d"
     },
   ];
 
