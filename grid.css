@@ -131,6 +131,36 @@ div.container{
 	float:right;
 	font-family: 'Raleway', sans-serif;
 }
+div.containere{
+	width: 1000px;
+	height: 1700px;
+	margin:35px auto;
+	float:right;
+	font-family: 'Raleway', sans-serif;
+}
+div.maine{
+	width: 600px;
+	
+	padding: 4px 40px 25px;
+	border: 2px solid gray;
+	border-radius: 10px;
+	font-family: "enzo_otmedium";
+	float:left;
+	margin-top:9px;
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
 div.main{
 	width: 300px;
 	padding: 4px 40px 25px;
