@@ -1,15 +1,15 @@
 (function(){
   function generateQuiz(){
-    // Declaration of variable allow us to store the HTML output
+    //  Declaration of a variable allows us to store the HTML output
     const output = [];
     questionQ.forEach(
-      (questionC, questionNumber) => {
-        // Array will be storing the list of possible answers
+    (questionC, questionNumber) => {
+		// Array will stock the list of possible responses
         const answers = [];
-        // Loop for each  answer
+        // Loop for each  responses
         for(letter in questionC.answers){
-          // Seting up an html radio button to allow the player to make a selection 
-          answers.push(
+		// Configure an html radio button to enable the player to select.
+			answers.push(
             `<label>
               <input type="radio" name="question${questionNumber}" value="${letter}">
               ${letter} :
@@ -17,75 +17,48 @@
             </label>`
           );
         }
-        // Adding  question & its answers to the output
         output.push(
           `<div class="question"> ${questionC.question} </div>
           <div class="answers"> ${answers.join('')} </div>`
         );
       }
     );
-    // finally combine our output list into one string of HTML and put it on the page
     quizContainer.innerHTML = output.join('');
 	}
-
-  function displayD(){
-
-    // gather answer containers from our quiz
+	function displayD(){
     const storeAnswers = quizContainer.querySelectorAll('.answers');
-	
-	// Declaration of variable point for each correct answer
 	let po = 10;
-	
-    // keep tracking the correct answers
     let correctN = 0;
 
-    // for each question
     questionQ.forEach( (questionC, questionNumber) => {
+	//locate the selected answer
+    const storeAnswer = storeAnswers[questionNumber];
+    const selector = `input[name=question${questionNumber}]:checked`;
+    const playerSelection = (storeAnswer.querySelector(selector) || {}).value;
 
-    // find selected answer
-      const storeAnswer = storeAnswers[questionNumber];
-      const selector = `input[name=question${questionNumber}]:checked`;
-      const playerSelection = (storeAnswer.querySelector(selector) || {}).value;
-
-      // if answer is correct
-      if(playerSelection === questionC.answerRight){
-        // adding the numbers of all correct answers
-        correctN++;
-		
-      // We will color the correct answers with yellow
-        storeAnswers[questionNumber].style.color = 'yellow';
-      }
-      // if answer is wrong or blank
-      else{
-      // We will color the wrong answers with red
-        storeAnswers[questionNumber].style.color = 'red';
-      }
+	// if answered correctly
+    if(playerSelection === questionC.answerRight){
+     correctN++;
+	storeAnswers[questionNumber].style.color = 'yellow';
+    }
+	// if the response is not correct or empty.
+    else{
+    // We will color the wrong answers with red
+    storeAnswers[questionNumber].style.color = 'red';
+    }
     });
-		numCo = correctN * po;
-		
-	//if (numCo < 99){
-	    //console.log('failed the test, Your Total Score is '+numCo);
-
-	//}else{
-	    //console.log('Congratulation !!! , Your Total Score is '+numCo);
-	// 	window.location = 'CongratulationPage.html'; 
-	//}
-	// resultsContainer.innerHTML = "Your have failed the Quiz &#128542 Your Score is : " +numCo+ " % ";
-	 
+	numCo = correctN * po;
 	 	if (numCo < 80) {
 		  	resultsContainer.innerHTML = "Your have failed the Quiz &#128542 Your Score is : " +numCo+ " % ";
-
 		} else if (numCo < 99) {
 			resultsContainer.innerHTML = "Your succeed the Quiz and you win a &#127941 your score is : " +numCo+ " % ";
 		} else {
 			window.location = 'CongratulationPage.html'; 
 		}
 	 }
-	
 	const quizContainer = document.getElementById('quiz');
 	const resultsContainer = document.getElementById('results');
 	const submitAnswerPlayer = document.getElementById('submit');
-	
 	const questionQ = [
 	{
       question: "What year were soccer rules codified ?",
@@ -184,10 +157,8 @@
       answerRight: "d"
     },
   ];
-
-  // Starting up the Soccer quiz Test
+  // Soccer test begins.
   generateQuiz();
-
   //  listeners Event
   submitAnswerPlayer.addEventListener('click', displayD);
 })();

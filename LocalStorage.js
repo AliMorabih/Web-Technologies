@@ -1,19 +1,13 @@
-
 function DataStorage(){
-	
 	let name,email,psw;
-	
 	name=document.getElementById("name").value;
 	email=document.getElementById("email").value;
 	psw=document.getElementById("psw").value;
-	
-
 	let playerData=new Array();
 	playerData=JSON.parse(localStorage.getItem("key"))?JSON.parse(localStorage.getItem("key")):[]
-	
 	if(playerData.some((v)=>{
 		return v.email==email})){
-	  alert("This Email address already exist in our Storage");
+	  alert("This Email address already exist in our Database");
 	}
 		if (name==null || name=="" || psw==null || psw=="" ){  
 		   alert(" Name or Password cannot be blank Please try again. ");  
