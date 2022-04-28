@@ -1,21 +1,20 @@
 <html lang="en">
-
 <head>
-		<link rel="stylesheet" href="style.css">
-        <meta charset="UTF-8">
+<link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
 </head>
- <body>
-			<canvas id="canv"></canvas>
-			<p > Congratulations You Have Answered All the Quiz Questions <br> You win &#127941  And  &#127942  &#128079 </p>
-			<bgsound src="Music.wav" loop="infinite">
+<body>
+<canvas id="canv"></canvas>
+<p > Congratulations You Have Answered All the Quiz Questions <br> You win &#127941  And  &#127942  &#128079 </p>
+<bgsound src="Music.wav" loop="infinite">
 <script>
 	window.animFrame = (function() { 	
 	return window.animFrame ||  
 	
-function(backC) {
+	function(backC){
       window.setTimeout(backC, 1000 / 100);
     };
-})();
+	})();
 	var can = document.getElementById('canv');
 	var canC = can.getContext('2d');
 	var w = can.width = window.innerWidth;
@@ -24,11 +23,10 @@ function(backC) {
 	var _h = h * 0.3;
 	var dataSt = [];
 	var ct = 0;
-
 	window.addEventListener('load', reDim);
 	window.addEventListener('reDim', reDim, false);
 
-function reDim() {
+	function reDim(){
 	can.width = w = window.innerWidth;
 	can.height = h = window.innerHeight;
 	can.style.position = 'absolute';
@@ -36,33 +34,27 @@ function reDim() {
     .03 + 'px';
 	can.style.top = (window.innerHeight - h) *
     .03 + 'px';
-}
-
-function drAnim() {
+	}
+	function drAnim(){
 	ct++;
 	if (ct % 6) desin();
 	window.animFrame(drAnim);
-}
+	}
 	drAnim();
-
-function desin() {
-
+	function desin(){
 	var shoot = {
     xD: genRandNum(_w - 900, _w + 900),
     yD: genRandNum(_h - 900, _h + 900),
     r: genRandNum(20, 80),
     gRX: genRandNum(-1, 1),
     gRY: genRandNum(-1, 1)
-  };
-
+	};
 	dataSt.push(shoot);
 	while (dataSt.length > 100) {
     dataSt.shift();
-  }
+	}
 	canC.clearRect(0, 0, w, h);
-
-  for (var i = 0; i < dataSt.length; i++) {
-
+	for (var i = 0; i < dataSt.length; i++) {
     shoot = dataSt[i];;
     canC.fillStyle = colorRand();
     canC.beginPath();
@@ -73,21 +65,20 @@ function desin() {
     canC.shadowColor = colorRand();
     canC.globalCompositeOperation = 'lighter';
     canC.fill();
-
     shoot.xD = shoot.xD + shoot.gRX;
     shoot.yD = shoot.yD + shoot.gRY;
     shoot.r = shoot.r * 0.96;
-  }
-}
-function colorRand() {
+	}
+	}
+	function colorRand() {
 	var red = Math.floor(Math.random() * 8);
 	var green = Math.floor(Math.random() * 80);
 	var blue = Math.floor(Math.random() * 200);
 	return "rgb(" + red + "," + green + "," + blue + ")";
-}
-function genRandNum(minM, maxM) {
+	}
+	function genRandNum(minM, maxM) {
 	return Math.floor(Math.random() * (maxM - minM + 1)) + minM;
-}			
+	}			
 </script>
 </body>
 </html>
