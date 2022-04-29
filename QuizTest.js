@@ -49,9 +49,9 @@
     });
 	numCo = correctN * po;
 	 	if (numCo < 80) {
-		  	resultsContainer.innerHTML = "Your have failed the Quiz &#128542 Your Score is : " +numCo+ " % ";
+		  	resultsContainer.innerHTML = " You did not pass the Quiz &#128542 Your Score is : " +numCo+ " % ";
 		} else if (numCo < 99) {
-			resultsContainer.innerHTML = "Your succeed the Quiz and you win a &#127941 your score is : " +numCo+ " % ";
+			resultsContainer.innerHTML = "You pass the quiz and earn a grade of &#127941 your score is : " +numCo+ " % ";
 		} else {
 			window.location = 'CongratulationPage.html'; 
 		}
