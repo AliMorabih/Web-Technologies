@@ -8,7 +8,7 @@ function SignIn(){
 	playerData=JSON.parse(localStorage.getItem("key"))?JSON.parse(localStorage.getItem("key")):[]
 
 	if(playerData.some((v)=>{return v.email==email && v.psw==psw})){
-	alert("Your Login information Passed we will redirect you to the QuizPage");
+	alert("Your login details Successful, we will redirect you to PageQuiz");
 	let playerCurrent=playerData.filter((v)=>{return v.email==email && v.psw==psw})[0]
 	localStorage.setItem('name',playerCurrent.name);
 	localStorage.setItem('email',playerCurrent.email);

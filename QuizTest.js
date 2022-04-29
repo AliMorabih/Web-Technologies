@@ -1,6 +1,6 @@
 (function(){
   function generateQuiz(){
-    //  Declaration of a variable allows us to store the HTML output
+    // Declaration of a variable allows us to store the HTML output
     const output = [];
     questionQ.forEach(
     (questionC, questionNumber) => {

@@ -10,10 +10,10 @@ function DataStorage(){
 	  alert("This Email address already exist in our Database");
 	}
 		if (name==null || name=="" || psw==null || psw=="" ){  
-		   alert(" Name or Password cannot be blank Please try again. ");  
+		   alert(" Name or password cannot be empty Please retry ");  
 		   return false;
 		}else if (email==null || email==""  ){  
-		   alert(" Email address cannot be empty");  
+		   alert(" The email address must not be empty ");  
 		   return false;   
 		}else if(psw.length<6 || psw.length>18){  
 		   alert(" Password should be between 6 and 18 characters Please Try again.");  
