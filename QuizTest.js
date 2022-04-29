@@ -1,8 +1,8 @@
 (function(){
   function generateQuiz(){
     // Declaration of a variable allows us to store the HTML output
-    const output = [];
-    questionQ.forEach(
+    const dataD = [];
+    questionU.forEach(
     (questionC, questionNumber) => {
 		// Array will stock the list of possible responses
         const answers = [];
@@ -17,20 +17,20 @@
             </label>`
           );
         }
-        output.push(
+        dataD.push(
           `<div class="question"> ${questionC.question} </div>
           <div class="answers"> ${answers.join('')} </div>`
         );
       }
     );
-    quizContainer.innerHTML = output.join('');
+    quizC.innerHTML = dataD.join('');
 	}
 	function displayD(){
-    const storeAnswers = quizContainer.querySelectorAll('.answers');
+    const storeAnswers = quizC.querySelectorAll('.answers');
 	let po = 10;
     let correctN = 0;
 
-    questionQ.forEach( (questionC, questionNumber) => {
+    questionU.forEach( (questionC, questionNumber) => {
 	//locate the selected answer
     const storeAnswer = storeAnswers[questionNumber];
     const selector = `input[name=question${questionNumber}]:checked`;
@@ -51,15 +51,15 @@
 	 	if (numCo < 80) {
 		  	resultsContainer.innerHTML = " You did not pass the Quiz &#128542 Your Score is : " +numCo+ " % ";
 		} else if (numCo < 99) {
-			resultsContainer.innerHTML = "You pass the quiz and earn a grade of &#127941 your score is : " +numCo+ " % ";
+			resultsContainer.innerHTML = "You pass the quiz and earn a &#127941 your score is : " +numCo+ " % ";
 		} else {
 			window.location = 'CongratulationPage.html'; 
 		}
 	 }
-	const quizContainer = document.getElementById('quiz');
+	const quizC = document.getElementById('quiz');
 	const resultsContainer = document.getElementById('results');
 	const submitAnswerPlayer = document.getElementById('submit');
-	const questionQ = [
+	const questionU = [
 	{
       question: "What year were soccer rules codified ?",
       answers: {
