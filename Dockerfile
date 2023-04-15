@@ -1,4 +1,8 @@
-# Use a lightweight web server as a parent image
 FROM nginx:alpine
-# This will Copy the contents of webpage to the default Nginx web root
-COPY . /usr/share/nginx/html
+
+COPY www /www
+COPY nginx.conf /etc/nginx/conf.d/default.conf
+
+EXPOSE 80
+
+CMD (tail -F /var/log/nginx/access.log &) && exec nginx -g "daemon off;"
