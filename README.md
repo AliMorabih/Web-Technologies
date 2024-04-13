@@ -8,6 +8,3 @@ Contact Me
 Have a question or want to collaborate on a project? Feel free to reach out to me:
 
 📧 Email: alimorabih@outlook.com
-💼 LinkedIn: https://www.linkedin.com/in/ali-morabih-98598a207/
-🌐 Personal Website: https://alimorabih.com
-📂 GitHub: https://github.com/alimorabih
